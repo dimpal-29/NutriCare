@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About| Nutricare</title>
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Nutricare</div>
+     <nav>
+
+         <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+      <ul class="nav-text" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="hospital.html">Hospitals</a></li>
+        <li><a href="bmi.html">BMI Calculator</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="about-hero-text">
+      <h1>Discover Nutricare</h1>
+      <p>Empowering healthy living with natural herbs and fruits.</p>
+    </div>
+  </section>
+
+  <!-- About Content Section -->
+  <section class="about-content-section">
+    <div class="about-text">
+        <h2>Our Story</h2>
+        <p>
+            Nutricare was founded with the vision of promoting healthy living through natural remedies. 
+            We strongly believe that nature provides the most effective solutions for maintaining wellness, and we are committed to making herbal and fruit-based health recommendations accessible to everyone.
+        </p>
+        <p>
+            Over the years, we have researched and collaborated with wellness experts to carefully select herbs, fruits, and natural remedies that can help boost immunity, enhance digestion, improve mental well-being, and support overall health. 
+            Every recommendation on our platform is based on extensive knowledge of natural health solutions.
+        </p>
+        <p>
+            Our mission is not only to provide products but also to educate our users about the benefits of living a natural lifestyle. 
+            We believe in empowering individuals to make informed choices about their health by understanding how herbs, fruits, and natural supplements can contribute to their daily wellness.
+        </p>
+        <p>
+            Nutricare also connects users to nearby hospitals and healthcare centers to ensure they have holistic support. 
+            Our goal is to integrate traditional herbal wisdom with modern health practices to create a complete wellness experience for our users.
+        </p>
+    </div>
+
+    <div class="about-image">
+        <img src="img/about/about_1.jpg" alt="Nutricare Story">
+        <img src="img/about/about_4.jpg" alt="Herbs">
+        <img src="img/about/about_3.jpg" alt="Fruits">
+        <img src="img/about/about_2.jpg" alt="Healthy Lifestyle">
+    </div>
+
+  </section>
+
+  <!-- Mission & Vision Cards -->
+  <section class="about-cards">
+    <div class="card">
+      <h3>Our Mission</h3>
+      <p>Provide 100% natural recommendations for a healthier lifestyle and educate users on the benefits of natural remedies.</p>
+    </div>
+    <div class="card">
+      <h3>Our Vision</h3>
+      <p>To promote wellness worldwide and connect users with herbal and fruit-based health solutions easily.</p>
+    </div>
+    <div class="card">
+      <h3>Our Values</h3>
+      <p>Trust, quality, sustainability, and customer wellness are at the heart of everything we do.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-box">
+        <h3>NutriCare</h3>
+        <p id="footer-about">
+          NutriCare is a health product recommendation system that helps users
+          improve health naturally using fruits and herbs.
+        </p>
+
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-square-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box">
+        <h3>Other</h3>
+        <ul>
+         
+          <li><a href="personal.html">Get Personal Recommendation</a></li>
+          <li><a href="bmi.html">BMI Calculator</a></li>
+          <li><a href="hospital.html">Hospitals</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer-box">
+        <h3>Contact Us</h3>
+        
+        <p class="contact-item">
+            <span class="icon-circle">
+                <i class="fa-solid fa-location-dot"></i>
+            </span>
+            India
+        </p>
+
+         <p class="contact-item">
+            <span class="icon-circle">
+                <i class="fa-solid fa-phone"></i>
+            </span>
+            +91 9XXXXXXXX
+        </p>
+
+         <p class="contact-item">
+            <span class="icon-circle">
+                <i class="fa-solid fa-envelope"></i>
+            </span>
+            support@nutricare.com
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 NutriCare | Health Product Recommendation System</p>
+    </div>
+  </footer>
+
+  <script>
+
+    window.onload = function () {
+
+      let hamburger = document.getElementById("hamburger");
+      let navMenu = document.getElementById("navMenu");
+
+    hamburger.onclick = function () 
+      { 
+        navMenu.classList.toggle("active");
+      };
+    }
+
+
+  </script>
+  
+</body>
+</html>

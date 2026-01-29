@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospitals</title>
+
+  <link rel="stylesheet" href="css/hospital.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" />
+</head>
+
+<body>
+
+<!--  NAVBAR (UNCHANGED) -->
+<header class="navbar">
+  <div class="logo">Nutricare</div>  
+  <nav>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+
+    <ul class="nav-text" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="product.html">Products</a></li>
+      <li><a href="hospital.html" class="active">Hospitals</a></li>
+      <li><a href="bmi.html">BMI Calculator</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hospital-hero">
+  <div class="hospital-info">
+    <h2>Nearby Hospitals</h2>
+    <p>Find trusted hospitals and healthcare centers near your area</p>
+  </div>
+</section>
+
+<section class="hospital-section">
+
+  <div class="hospital-search">
+    <input type="text" id="searchName" placeholder="Search hospital name">
+
+    <select id="cityFilter">
+      <option value="">Select City</option>
+      <option value="ahmedabad">Ahmedabad</option>
+      <option value="surat">Surat</option>
+      <option value="vadodara">Vadodara</option>
+      <option value="rajkot">Rajkot</option>
+      <option value="bhavnagar">Bhavnagar</option>
+      <option value="jamnagar">Jamnagar</option>
+      <option value="gandhinagar">Gandhinagar</option>
+    </select>
+
+
+    <button class="btn" id="searchBtn">Search</button>
+  </div>
+
+  <div class="hospital-container" id="hospitalList">
+
+    <div class="hospital-card"
+         data-name="apollo hospitals city center"
+         data-city="ahmedabad"
+         data-state="gujarat">
+      <h3>Apollo Hospitals City Center</h3>
+      <p><strong>City:</strong> Ahmedabad</p>
+      <p><strong>Address:</strong> Ellis Bridge, Ahmedabad</p>
+      <p><strong>Contact:</strong> +91 79 6670 1800</p>
+      <a class="map-btn" target="_blank"
+         href="https://www.google.com/maps/search/?api=1&query=Apollo+Hospitals+Ahmedabad">
+         View on Map
+      </a>
+    </div>
+
+    <div class="hospital-card"
+         data-name="zydus hospital"
+         data-city="ahmedabad"
+         data-state="gujarat">
+      <h3>Zydus Hospital</h3>
+      <p><strong>City:</strong> Ahmedabad</p>
+      <p><strong>Address:</strong> Sola, Ahmedabad</p>
+      <p><strong>Contact:</strong> +91 79 6619 0200</p>
+      <a class="map-btn" target="_blank"
+         href="https://www.google.com/maps/search/?api=1&query=Zydus+Hospital+Ahmedabad">
+         View on Map
+      </a>
+    </div>
+
+    <!-- Surat -->
+    <div class="hospital-card"
+         data-name="kiran multispeciality hospital"
+         data-city="surat"
+         data-state="gujarat">
+      <h3>Kiran Multispeciality Hospital</h3>
+      <p><strong>City:</strong> Surat</p>
+      <p><strong>Address:</strong> Katargam, Surat</p>
+      <p><strong>Contact:</strong> +91 261 716 1111</p>
+      <a class="map-btn" target="_blank"
+         href="https://www.google.com/maps/search/?api=1&query=Kiran+Hospital+Surat">
+         View on Map
+      </a>
+    </div>
+
+    <!-- Vadodara -->
+    <div class="hospital-card"
+         data-name="sterling hospital"
+         data-city="vadodara"
+         data-state="gujarat">
+      <h3>Sterling Hospital</h3>
+      <p><strong>City:</strong> Vadodara</p>
+      <p><strong>Address:</strong> Race Course Road</p>
+      <p><strong>Contact:</strong> +91 265 235 9999</p>
+      <a class="map-btn" target="_blank"
+         href="https://www.google.com/maps/search/?api=1&query=Sterling+Hospital+Vadodara">
+         View on Map
+      </a>
+    </div>
+
+    <!-- Rajkot -->
+    <div class="hospital-card"
+         data-name="wockhardt hospital"
+         data-city="rajkot"
+         data-state="gujarat">
+      <h3>Wockhardt Hospital</h3>
+      <p><strong>City:</strong> Rajkot</p>
+      <p><strong>Address:</strong> Kalawad Road</p>
+      <p><strong>Contact:</strong> +91 281 660 1111</p>
+      <a class="map-btn" target="_blank"
+         href="https://www.google.com/maps/search/?api=1&query=Wockhardt+Hospital+Rajkot">
+         View on Map
+      </a>
+    </div>
+
+    <!-- Jamnagar -->
+    <div class="hospital-card"
+         data-name="gg hospital"
+         data-city="jamnagar"
+         data-state="gujarat">
+      <h3>G.G. Hospital</h3>
+      <p><strong>City:</strong> Jamnagar</p>
+      <p><strong>Address:</strong> Patel Colony</p>
+      <p><strong>Contact:</strong> +91 288 267 0000</p>
+      <a class="map-btn" target="_blank"
+         href="https://www.google.com/maps/search/?api=1&query=GG+Hospital+Jamnagar">
+         View on Map
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+ <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-box">
+        <h3>NutriCare</h3>
+        <p id="footer-about">
+          NutriCare is a health product recommendation system that helps users
+          improve health naturally using fruits and herbs.
+        </p>
+
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-square-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box">
+        <h3>Other</h3>
+        <ul>
+          <li><a href="personal.html">Get Personal Recommendation</a></li>
+          <li><a href="bmi.html">BMI Calculator</a></li>
+          <li><a href="hospital.html">Hospitals</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer-box">
+        <h3>Contact Us</h3>
+        
+        <p class="contact-item">
+            <span class="icon-circle">
+                <i class="fa-solid fa-location-dot"></i>
+            </span>
+            India
+        </p>
+
+         <p class="contact-item">
+            <span class="icon-circle">
+                <i class="fa-solid fa-phone"></i>
+            </span>
+            +91 9XXXXXXXX
+        </p>
+
+         <p class="contact-item">
+            <span class="icon-circle">
+                <i class="fa-solid fa-envelope"></i>
+            </span>
+            support@nutricare.com
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 NutriCare | Health Product Recommendation System</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="js/hospital.js">
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutricare | Personal Recommendation</title>
+
+  <link rel="stylesheet" href="css/personal.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+
+  <header class="navbar">
+    <div class="logo"><a href="index.html" >Nutricar</a></div>
+    <nav>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+
+      <ul class="nav-text" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="hospital.html">Hospitals</a></li>
+        <li><a href="bmi.html">BMI Calculator</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="product-hero">
+  <h1>Personal Herbal Recommendation</h1>
+  <p>Answer a few questions and get natural health suggestions</p>
+</section>
+
+<!-- Recommendation Section -->
+    <section class="product-section">
+
+      <div class="product-search recommendation-ui">
+        <h2>Tell Us About Yourself</h2>
+
+        <form id="healthForm" class="form-grid">
+
+          <input type="number" id="age" placeholder="Age" required>
+
+          <select id="gender" required>
+            <option value="">Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+
+          <select id="disease" required>
+             <option value="">Select Health Problem</option>
+
+              <option value="cold">Cold</option>
+              <option value="cough">Cough</option>
+              <option value="cold cough">Cold & Cough</option>
+
+              <option value="diabetes">Diabetes</option>
+
+              <option value="fever">Fever</option>
+
+              <option value="digestion">Digestion Issues</option>
+
+              <option value="constipation">Constipation</option>
+
+              <option value="bp">High Blood Pressure (BP)</option>
+
+              <option value="heart">Heart Problems</option>
+
+              <option value="immunity">Low Immunity</option>
+
+              <option value="weight loss">Weight Loss</option>
+              <option value="obesity">Obesity</option>
+
+              <option value="skin">Skin Problems</option>
+          </select>
+
+          <select id="diet">
+            <option>Diet Type</option>
+            <option>Vegetarian</option>
+            <option>Non-Vegetarian</option>
+            <option>Vegan</option>
+          </select>
+
+          <select id="medicine">
+            <option>Taking Medicine?</option>
+            <option>No</option>
+            <option>Yes</option>
+          </select>
+
+          <button type="submit" class="btn full-btn">
+            Get Recommendation
+          </button>
+
+        </form>
+
+        <div id="resultBox"></div>
+      </div>
+
+    </section>
+
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-box">
+        <h3>NutriCare</h3>
+        <p id="footer-about">
+          NutriCare is a health product recommendation system that helps users
+          improve health naturally using fruits and herbs.
+        </p>
+
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-square-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box">
+        <h3>Other</h3>
+        <ul>
+          <li><a href="personal.html">Get Personal Recommendation</a></li>
+          <li><a href="bmi.html">BMI Calculator</a></li>
+          <li><a href="hospital.html">Hospitals</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer-box">
+        <h3>Contact Us</h3>
+        
+        <p class="contact-item">
+            <span class="icon-circle">
+                <i class="fa-solid fa-location-dot"></i>
+            </span>
+            India
+        </p>
+
+         <p class="contact-item">
+            <span class="icon-circle">
+                <i class="fa-solid fa-phone"></i>
+            </span>
+            +91 9XXXXXXXX
+        </p>
+
+         <p class="contact-item">
+            <span class="icon-circle">
+                <i class="fa-solid fa-envelope"></i>
+            </span>
+            support@nutricare.com
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 NutriCare | Health Product Recommendation System</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="js/personal.js"></script>
+  
+</body>
+</html>

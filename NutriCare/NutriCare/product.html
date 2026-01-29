@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutricare | Products</title>
+
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Nutricare</div>
+   
+     <nav>
+
+        
+      <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-text" id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="product.html" class="active">Products</a></li>
+          <li><a href="hospital.html">Hospitals</a></li>
+          <li><a href="bmi.html">BMI Calculator</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+
+  </header>
+
+  <!-- Hero Section -->
+  <section class="product-hero">
+    <h1>Our Natural Health Products</h1>
+    <p>Explore the goodness of nature through herbs, fruits, juices, and oils.</p>
+  </section>
+
+     <section class="recommend-banner">
+      <div class="recommend-content">
+        <h2>Get Personal Herbal Recommendation</h2>
+        <p>
+          Tell us about your health condition and get the best herbs
+          and fruits specially recommended for you.
+        </p>
+        <a href="personal.html" class="btn recommend-btn">
+          Get Personal Recommendation
+        </a>
+      </div>
+    </section>
+
+  <section  class="product-section">
+
+      <div class="product-search">
+        <h2>Health Problem Based Product Recommendation</h2> 
+            <input type="text" placeholder="Enter disease (e.g. Diabetes)">
+            <button type="button" class="btn">Find</button>
+      </div>
+
+      <div class="product-grid"id="productGrid">
+
+
+         <div class="product-card" data-product="tulsi">
+            <img src="img/product/HerbsSection/Tulsi.jpg">
+            <h3>Tulsi</h3>
+            <p>Boosts immunity, helpful in cold, cough and fever.</p>
+          </div>
+
+          <div class="product-card" data-product="ginger">
+            <img src="img/product/HerbsSection/product_Ginger.jpg">
+            <h3>Ginger</h3>
+            <p>Improves digestion and helps in weight control.</p>
+          </div>
+
+          <div class="product-card" data-product="neem">
+            <img src="img/product/HerbsSection/neem.jpg">
+            <h3>Neem</h3>
+            <p>Purifies blood and improves skin health.</p>
+          </div>
+
+          <div class="product-card" data-product="cinnamon">
+            <img src="img/product/HerbsSection/cinnamon.jpg">
+            <h3>Cinnamon</h3>
+            <p>Helps control blood sugar levels.</p>
+          </div>
+
+          <div class="product-card" data-product="giloy">
+            <img src="img/product/HerbsSection/giloy.jpg">
+            <h3>Giloy</h3>
+            <p>Reduces fever and strengthens immunity.</p>
+          </div>
+
+          <div class="product-card" data-product="fennel">
+            <img src="img/product/HerbsSection/FennelSeeds.jpg">
+            <h3>Fennel</h3>
+            <p>Relieves gas and digestion problems.</p>
+          </div>
+
+          <div class="product-card" data-product="isabgol">
+            <img src="img/product/HerbsSection/Isabgol.jpeg">
+            <h3>Isabgol</h3>
+            <p>Best natural remedy for constipation.</p>
+          </div>
+
+          <div class="product-card" data-product="triphala">
+            <img src="img/product/HerbsSection/triphla.jpg">
+            <h3>Triphala</h3>
+            <p>Cleans digestive system naturally.</p>
+          </div>
+
+          <div class="product-card" data-product="garlic">
+            <img src="img/product/HerbsSection/garlic.jpeg">
+            <h3>Garlic</h3>
+            <p>Controls BP and improves heart health.</p>
+          </div>
+
+
+          <div class="product-card" data-product="turmeric">
+            <img src="img/product/HerbsSection/product_Turmeric.jpg">
+            <h3>Turmeric</h3>
+            <p>Powerful antioxidant and immunity booster.</p>
+          </div>
+
+          <div class="product-card" data-product="ashwagandha">
+            <img src="img/product/HerbsSection/product_Ashwagandha.jpg">
+            <h3>Ashwagandha</h3>
+            <p>Reduces stress and improves immunity.</p>
+          </div>
+
+          <div class="product-card" data-product="green-tea">
+            <img src="img/product/HerbsSection/greenTea.jpg">
+            <h3>Green Tea</h3>
+            <p>Boosts metabolism and weight loss.</p>
+          </div>
+
+          <div class="product-card" data-product="aloe-vera">
+            <img src="img/product/HerbsSection/AloeVera.jpg">
+            <h3>Aloe Vera</h3>
+            <p>Improves skin and digestion.</p>
+          </div>
+
+          <div class="product-card" data-product="amla">
+            <img src="img/product/HerbsSection/amla.jpg">
+            <h3>Amla</h3>
+            <p>Rich in Vitamin C, boosts immunity, improves digestion and supports healthy skin.</p>
+          </div>
+
+          <div class="product-card" data-product="mint">
+              <img src="img/product/HerbsSection/mint.jpg">
+              <h3>Mint (Pudina)</h3>
+              <p>Helps in digestion, reduces acidity and keeps body cool.</p>
+            </div>
+
+          <!-- FRUITS -->
+          <div class="product-card" data-product="apple">
+            <img src="img/product/FruitsSection/apple.jpg">
+            <h3>Apple</h3>
+            <p>Good for heart and diabetes.</p>
+          </div>
+
+          <div class="product-card" data-product="guava">
+            <img src="img/product/FruitsSection/Guava.jpg">
+            <h3>Guava</h3>
+            <p>Rich in Vitamin C, boosts immunity.</p>
+          </div>
+
+          <div class="product-card" data-product="orange">
+            <img src="img/product/FruitsSection/orange.jpg">
+            <h3>Orange</h3>
+            <p>Improves immunity and skin health.</p>
+          </div>
+
+          <div class="product-card" data-product="strawberry">
+            <img src="img/product/FruitsSection/Strawberry.jpg">
+            <h3>Strawberry</h3>
+            <p>Rich in antioxidants, improves skin health and supports heart health.</p>
+          </div>
+
+
+          <div class="product-card" data-product="kiwi">
+            <img src="img/product/FruitsSection/kiwi.jpg">
+            <h3>Kiwi</h3>
+            <p>Rich in antioxidants.</p>
+          </div>
+
+          <div class="product-card" data-product="papaya">
+            <img src="img/product/FruitsSection/papaya-fruit.jpg">
+            <h3>Papaya</h3>
+            <p>Improves digestion.</p>
+          </div>
+
+          <div class="product-card" data-product="pear">
+            <img src="img/product/FruitsSection/Pear.jpeg">
+            <h3>Pear</h3>
+            <p>High fiber fruit for digestion.</p>
+          </div>
+
+          <div class="product-card" data-product="fig">
+            <img src="img/product/FruitsSection/fig.jpeg">
+            <h3>Fig (Anjeer)</h3>
+            <p>Relieves constipation.</p>
+          </div>
+
+          <div class="product-card" data-product="banana">
+            <img src="img/product/FruitsSection/Banana1.jpg">
+            <h3>Banana</h3>
+            <p>Controls BP and gives energy.</p>
+          </div>
+
+          <div class="product-card" data-product="pomegranate">
+            <img src="img/product/FruitsSection/Pomegranate.jpg">
+            <h3>Pomegranate</h3>
+            <p>Improves blood circulation.</p>
+          </div>
+
+          <div class="product-card" data-product="lemon">
+            <img src="img/product/FruitsSection/lemon.jpg">
+            <h3>Lemon</h3>
+            <p>Helps in weight loss.</p>
+          </div>
+
+          <div class="product-card" data-product="watermelon">
+          <img src="img/product/FruitsSection/watermelon.jpeg">
+          <h3>Watermelon</h3>
+          <p>Hydrates body, supports weight loss and improves skin health.</p>
+        </div>
+
+      </div> 
+      
+  </section>
+
+
+  <section class="product-info-section">
+
+  <h2>Why Fruits & Herbs Are Important?</h2>
+  <p class="info-sub">
+    Natural fruits and herbs play an important role in maintaining a healthy lifestyle.
+  </p>
+
+  <div class="info-container">
+
+    <div class="info-box">
+      <h3> Herbal Benefits</h3>
+      <p>
+        Herbs like Tulsi, Ginger, Neem, and Ashwagandha help boost immunity,
+        reduce stress, improve digestion, and support overall wellness naturally.
+      </p>
+    </div>
+
+    <div class="info-box">
+      <h3> Fruit Benefits</h3>
+      <p>
+        Fruits such as Apple, Banana, Orange, and Papaya provide essential vitamins,
+        minerals, and fiber that help improve digestion, heart health, and energy levels.
+      </p>
+    </div>
+
+    <div class="info-box">
+      <h3> Natural Health Approach</h3>
+      <p>
+        NutriCare focuses on natural health solutions by recommending fruits and herbs
+        based on common diseases instead of medicines or chemical products.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+     <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-box">
+        <h3>NutriCare</h3>
+        <p id="footer-about">
+          NutriCare is a health product recommendation system that helps users
+          improve health naturally using fruits and herbs.
+        </p>
+
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-square-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box">
+        <h3>Other</h3>
+        <ul>
+          <li><a href="personal.html">Get Personal Recommendation</a></li>
+          <li><a href="bmi.html">BMI Calculator</a></li>
+          <li><a href="hospital.html">Hospitals</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer-box">
+        <h3>Contact Us</h3>
+        
+        <p class="contact-item">
+            <span class="icon-circle">
+                <i class="fa-solid fa-location-dot"></i>
+            </span>
+            India
+        </p>
+
+         <p class="contact-item">
+            <span class="icon-circle">
+                <i class="fa-solid fa-phone"></i>
+            </span>
+            +91 9XXXXXXXX
+        </p>
+
+         <p class="contact-item">
+            <span class="icon-circle">
+                <i class="fa-solid fa-envelope"></i>
+            </span>
+            support@nutricare.com
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 NutriCare | Health Product Recommendation System</p>
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/product.js">
+
+  </script>
+
+</body>
+</html>
