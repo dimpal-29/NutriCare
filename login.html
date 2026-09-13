@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+
+     
+</head>
+<body>
+    
+    <div class="box">
+        <h2 class="heading">Login</h2>
+
+        <form  method="get" id="loginfrom">
+            <label>Email:</label>
+            <input type="email" required class="input-login" id="loginEmail">
+            <br><br>
+
+            <label>Password:</label>
+            <input type="password"required class="input-login" id="loginPassword" >
+            <br><br>
+
+            <input type="submit" value="Login Now" class="btn" >
+
+        </form>
+
+             <p id="errorMsg" style="color:red; font-size: 16px;"></p>
+
+         <p>If you have new user <a href="register.html">Registration Here </a></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <script >
+        document.getElementById("loginfrom").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const savedEmail = localStorage.getItem("userEmail");
+            const savedPassword = localStorage.getItem("userPassword");
+
+            const email = document.getElementById("loginEmail").value;
+            const password = document.getElementById("loginPassword").value;
+
+            if (email !== savedEmail || password !== savedPassword) 
+            {
+            document.getElementById("errorMsg").innerText =
+                "You are not registered. Please register first.";
+            } 
+            else 
+            {
+
+                   Swal.fire({
+                    title: "login Successful!",
+                    icon: "success"
+                    }).then(() => {
+                    window.location.href = 'index.html';
+                    });
+
+                localStorage.setItem("isLogin", "true");
+            }
+        });
+    </script>
+
+</body>
+</html>

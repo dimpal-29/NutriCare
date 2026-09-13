@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator | NutriCare</title>
+    <link rel="stylesheet" href="css/bmi.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body>
+
+    <!-- Navbar (same shared navbar on every page) -->
+    <div id="navbar-placeholder"></div>
+
+
+  <section class="bmi-hero">
+       <div class="bmi-info">
+        <h2>BMI Calculator</h2>
+        <p>Check your Body Mass Index</p>
+    </div>
+  </section>
+
+  <section class="bmi-box">
+   
+
+    <form id="bmiForm">
+      <label>Height (in cm):</label>
+      <input type="number" placeholder="Enter height in cm" class="input-box" id="height"><br>
+
+      <label>Weight (in kg):</label>
+      <input type="number" placeholder="Enter weight in kg" class="input-box" id="weight"><br>
+
+      <input type="submit" value="Calculate BMI" class="btn"><br>
+
+      <div class="bmi-result">
+          <p id="bmiValue"><strong>BMI:</strong> --</p>
+          <p id="bmiStatus"><strong>Status:</strong> --</p>
+          <p id="bmiRange"><strong>Healthy Weight Range:</strong> --</p>
+          <p id="bmiTip"><strong>Recommendation:</strong> --</p>
+      </div>
+    </form>
+  </section>
+
+  <!-- BMI History -->
+  <section class="bmi-history-section">
+    <div class="history-box">
+      <div class="history-header">
+        <h2>Your BMI History</h2>
+        <button type="button" id="clearHistoryBtn" class="btn-clear">Clear History</button>
+      </div>
+
+      <div class="history-table-wrap">
+        <table class="history-table" id="historyTable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Height (cm)</th>
+              <th>Weight (kg)</th>
+              <th>BMI</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="historyBody">
+            <!-- rows added by JS -->
+          </tbody>
+        </table>
+        <p id="noHistoryMsg" class="no-history">No BMI records yet. Calculate your BMI to start tracking.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BMI Progress Chart -->
+  <section class="bmi-chart-section">
+    <div class="chart-box">
+      <h2>BMI Progress Chart</h2>
+      <canvas id="bmiChart"></canvas>
+      <p id="noChartMsg" class="no-history">No data to display yet.</p>
+    </div>
+  </section>
+
+
+   <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-box">
+        <h3>NutriCare</h3>
+        <p id="footer-about">
+          NutriCare is a health product recommendation system that helps users
+          improve health naturally using fruits and herbs.
+        </p>
+
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-square-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box">
+        <h3>Other</h3>
+        <ul>
+          <li><a href="personal.html">Get Personal Recommendation</a></li>
+          <li><a href="bmi.html">BMI Calculator</a></li>
+          <li><a href="hospital.html">Hospitals</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer-box">
+        <h3>Contact Us</h3>
+        
+        <p class="contact-item">
+            <span class="icon-circle">
+                <i class="fa-solid fa-location-dot"></i>
+            </span>
+            India
+        </p>
+
+         <p class="contact-item">
+            <span class="icon-circle">
+                <i class="fa-solid fa-phone"></i>
+            </span>
+            +91 9XXXXXXXX
+        </p>
+
+         <p class="contact-item">
+            <span class="icon-circle">
+                <i class="fa-solid fa-envelope"></i>
+            </span>
+            support@nutricare.com
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 NutriCare | Health Product Recommendation System</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="js/navbar.js"></script>
+
+  <script src="js/bmi.js">x</script>
+
+</body>
+</html>

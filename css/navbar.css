@@ -1,0 +1,113 @@
+/* ================================================
+   SHARED NAVBAR (same on every page, like Home page)
+   Loaded AFTER each page's own CSS so these rules win.
+================================================= */
+
+#navbar-placeholder .navbar {
+  background-color: #2e8b57;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 5vw;
+  flex-wrap: wrap;
+}
+
+#navbar-placeholder .logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+}
+
+#navbar-placeholder .logo a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#navbar-placeholder .hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+#navbar-placeholder .hamburger span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+}
+
+#navbar-placeholder .navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  flex-wrap: wrap;
+}
+
+#navbar-placeholder .navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+  position: relative;
+}
+
+#navbar-placeholder .navbar a:hover,
+#navbar-placeholder .navbar a.active {
+  color: #c9ffd9;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+/* Login / Logout shown as buttons */
+#navbar-placeholder #loginItem,
+#navbar-placeholder #logoutItem a {
+  background-color: #ffffff;
+  color: #2e8b57;
+  padding: 8px 18px;
+  border-radius: 6px;
+  text-decoration: none !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+#navbar-placeholder #loginItem:hover,
+#navbar-placeholder #logoutItem a:hover {
+  background-color: #246b45;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+#navbar-placeholder #logoutItem {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  #navbar-placeholder .hamburger {
+    display: flex;
+  }
+
+  #navbar-placeholder .navbar ul {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #2e8b57;
+    margin-top: 10px;
+  }
+
+  #navbar-placeholder .navbar ul.active {
+    display: flex;
+  }
+
+  #navbar-placeholder .navbar ul li {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  #navbar-placeholder #loginItem,
+  #navbar-placeholder #logoutItem a {
+    display: inline-block;
+  }
+}

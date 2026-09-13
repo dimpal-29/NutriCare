@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospitals</title>
+
+  <link rel="stylesheet" href="css/hospital.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" />
+</head>
+
+<body>
+
+<!--  NAVBAR (same shared navbar on every page) -->
+<div id="navbar-placeholder"></div>
+
+<section class="hospital-hero">
+  <div class="hospital-info">
+    <h2>Nearby Hospitals</h2>
+    <p>Find trusted hospitals and healthcare centers near your area</p>
+  </div>
+</section>
+
+<section class="hospital-section">
+
+  <div class="hospital-search">
+    <input type="text" id="searchName" placeholder="Search hospital name">
+
+    <select id="cityFilter">
+      <option value="">Select City</option>
+      <option value="ahmedabad">Ahmedabad</option>
+      <option value="surat">Surat</option>
+      <option value="vadodara">Vadodara</option>
+      <option value="rajkot">Rajkot</option>
+      <option value="bhavnagar">Bhavnagar</option>
+      <option value="jamnagar">Jamnagar</option>
+      <option value="gandhinagar">Gandhinagar</option>
+    </select>
+
+
+    <button class="btn" id="searchBtn">Search</button>
+  </div>
+
+  <p id="hospitalEmptyMsg" class="hospital-empty-msg"></p>
+
+  <div class="hospital-container" id="hospitalList">
+
+    <div class="hospital-card"
+         data-name="apollo hospitals city center"
+         data-city="ahmedabad"
+         data-state="gujarat">
+      <h3>Apollo Hospitals City Center</h3>
+      <p><strong>City:</strong> Ahmedabad</p>
+      <p><strong>Address:</strong> Ellis Bridge, Ahmedabad</p>
+      <p><strong>Contact:</strong> +91 79 6670 1800</p>
+      <a class="map-btn" target="_blank"
+         href="https://www.google.com/maps/search/?api=1&query=Apollo+Hospitals+Ahmedabad">
+         View on Map
+      </a>
+    </div>
+
+    <div class="hospital-card"
+         data-name="zydus hospital"
+         data-city="ahmedabad"
+         data-state="gujarat">
+      <h3>Zydus Hospital</h3>
+      <p><strong>City:</strong> Ahmedabad</p>
+      <p><strong>Address:</strong> Sola, Ahmedabad</p>
+      <p><strong>Contact:</strong> +91 79 6619 0200</p>
+      <a class="map-btn" target="_blank"
+         href="https://www.google.com/maps/search/?api=1&query=Zydus+Hospital+Ahmedabad">
+         View on Map
+      </a>
+    </div>
+
+    <!-- Surat -->
+    <div class="hospital-card"
+         data-name="kiran multispeciality hospital"
+         data-city="surat"
+         data-state="gujarat">
+      <h3>Kiran Multispeciality Hospital</h3>
+      <p><strong>City:</strong> Surat</p>
+      <p><strong>Address:</strong> Katargam, Surat</p>
+      <p><strong>Contact:</strong> +91 261 716 1111</p>
+      <a class="map-btn" target="_blank"
+         href="https://www.google.com/maps/search/?api=1&query=Kiran+Hospital+Surat">
+         View on Map
+      </a>
+    </div>
+
+    <!-- Vadodara -->
+    <div class="hospital-card"
+         data-name="sterling hospital"
+         data-city="vadodara"
+         data-state="gujarat">
+      <h3>Sterling Hospital</h3>
+      <p><strong>City:</strong> Vadodara</p>
+      <p><strong>Address:</strong> Race Course Road</p>
+      <p><strong>Contact:</strong> +91 265 235 9999</p>
+      <a class="map-btn" target="_blank"
+         href="https://www.google.com/maps/search/?api=1&query=Sterling+Hospital+Vadodara">
+         View on Map
+      </a>
+    </div>
+
+    <!-- Rajkot -->
+    <div class="hospital-card"
+         data-name="wockhardt hospital"
+         data-city="rajkot"
+         data-state="gujarat">
+      <h3>Wockhardt Hospital</h3>
+      <p><strong>City:</strong> Rajkot</p>
+      <p><strong>Address:</strong> Kalawad Road</p>
+      <p><strong>Contact:</strong> +91 281 660 1111</p>
+      <a class="map-btn" target="_blank"
+         href="https://www.google.com/maps/search/?api=1&query=Wockhardt+Hospital+Rajkot">
+         View on Map
+      </a>
+    </div>
+
+    <!-- Jamnagar -->
+    <div class="hospital-card"
+         data-name="gg hospital"
+         data-city="jamnagar"
+         data-state="gujarat">
+      <h3>G.G. Hospital</h3>
+      <p><strong>City:</strong> Jamnagar</p>
+      <p><strong>Address:</strong> Patel Colony</p>
+      <p><strong>Contact:</strong> +91 288 267 0000</p>
+      <a class="map-btn" target="_blank"
+         href="https://www.google.com/maps/search/?api=1&query=GG+Hospital+Jamnagar">
+         View on Map
+      </a>
+    </div>
+
+    <!-- ===== Extra hospitals (hidden by default, shown when user searches) ===== -->
+
+    <div class="hospital-card extra-hospital"
+         data-name="cims hospital"
+         data-city="ahmedabad"
+         data-state="gujarat">
+      <h3>CIMS Hospital</h3>
+      <p><strong>City:</strong> Ahmedabad</p>
+      <p><strong>Address:</strong> Science City Road, Ahmedabad</p>
+      <p><strong>Contact:</strong> +91 79 6672 9999</p>
+      <a class="map-btn" target="_blank"
+         href="https://www.google.com/maps/search/?api=1&query=CIMS+Hospital+Ahmedabad">
+         View on Map
+      </a>
+    </div>
+
+    <div class="hospital-card extra-hospital"
+         data-name="shalby hospital"
+         data-city="ahmedabad"
+         data-state="gujarat">
+      <h3>Shalby Hospital</h3>
+      <p><strong>City:</strong> Ahmedabad</p>
+      <p><strong>Address:</strong> S.G. Highway, Ahmedabad</p>
+      <p><strong>Contact:</strong> +91 79 4020 4020</p>
+      <a class="map-btn" target="_blank"
+         href="https://www.google.com/maps/search/?api=1&query=Shalby+Hospital+Ahmedabad">
+         View on Map
+      </a>
+    </div>
+
+    <div class="hospital-card extra-hospital"
+         data-name="bhagwan mahavir hospital"
+         data-city="surat"
+         data-state="gujarat">
+      <h3>Bhagwan Mahavir Hospital</h3>
+      <p><strong>City:</strong> Surat</p>
+      <p><strong>Address:</strong> Surat</p>
+      <p><strong>Contact:</strong> +91 261 247 0000</p>
+      <a class="map-btn" target="_blank"
+         href="https://www.google.com/maps/search/?api=1&query=Bhagwan+Mahavir+Hospital+Surat">
+         View on Map
+      </a>
+    </div>
+
+    <div class="hospital-card extra-hospital"
+         data-name="unity hospital"
+         data-city="surat"
+         data-state="gujarat">
+      <h3>Unity Hospital</h3>
+      <p><strong>City:</strong> Surat</p>
+      <p><strong>Address:</strong> Surat</p>
+      <p><strong>Contact:</strong> +91 261 220 0000</p>
+      <a class="map-btn" target="_blank"
+         href="https://www.google.com/maps/search/?api=1&query=Unity+Hospital+Surat">
+         View on Map
+      </a>
+    </div>
+
+    <div class="hospital-card extra-hospital"
+         data-name="ssg hospital"
+         data-city="vadodara"
+         data-state="gujarat">
+      <h3>SSG Hospital</h3>
+      <p><strong>City:</strong> Vadodara</p>
+      <p><strong>Address:</strong> Vadodara</p>
+      <p><strong>Contact:</strong> +91 265 242 7000</p>
+      <a class="map-btn" target="_blank"
+         href="https://www.google.com/maps/search/?api=1&query=SSG+Hospital+Vadodara">
+         View on Map
+      </a>
+    </div>
+
+    <div class="hospital-card extra-hospital"
+         data-name="bhailal amin general hospital"
+         data-city="vadodara"
+         data-state="gujarat">
+      <h3>Bhailal Amin General Hospital</h3>
+      <p><strong>City:</strong> Vadodara</p>
+      <p><strong>Address:</strong> Vadodara</p>
+      <p><strong>Contact:</strong> +91 265 240 1400</p>
+      <a class="map-btn" target="_blank"
+         href="https://www.google.com/maps/search/?api=1&query=Bhailal+Amin+General+Hospital+Vadodara">
+         View on Map
+      </a>
+    </div>
+
+    <div class="hospital-card extra-hospital"
+         data-name="sanjivani hospital"
+         data-city="rajkot"
+         data-state="gujarat">
+      <h3>Sanjivani Hospital</h3>
+      <p><strong>City:</strong> Rajkot</p>
+      <p><strong>Address:</strong> Rajkot</p>
+      <p><strong>Contact:</strong> +91 281 247 4000</p>
+      <a class="map-btn" target="_blank"
+         href="https://www.google.com/maps/search/?api=1&query=Sanjivani+Hospital+Rajkot">
+         View on Map
+      </a>
+    </div>
+
+    <div class="hospital-card extra-hospital"
+         data-name="bhavnagar multispeciality hospital"
+         data-city="bhavnagar"
+         data-state="gujarat">
+      <h3>Bhavnagar Multispeciality Hospital</h3>
+      <p><strong>City:</strong> Bhavnagar</p>
+      <p><strong>Address:</strong> Bhavnagar</p>
+      <p><strong>Contact:</strong> +91 278 251 0000</p>
+      <a class="map-btn" target="_blank"
+         href="https://www.google.com/maps/search/?api=1&query=Hospital+Bhavnagar">
+         View on Map
+      </a>
+    </div>
+
+    <div class="hospital-card extra-hospital"
+         data-name="gandhinagar civil hospital"
+         data-city="gandhinagar"
+         data-state="gujarat">
+      <h3>Gandhinagar Civil Hospital</h3>
+      <p><strong>City:</strong> Gandhinagar</p>
+      <p><strong>Address:</strong> Gandhinagar</p>
+      <p><strong>Contact:</strong> +91 79 2324 0000</p>
+      <a class="map-btn" target="_blank"
+         href="https://www.google.com/maps/search/?api=1&query=Civil+Hospital+Gandhinagar">
+         View on Map
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+ <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-box">
+        <h3>NutriCare</h3>
+        <p id="footer-about">
+          NutriCare is a health product recommendation system that helps users
+          improve health naturally using fruits and herbs.
+        </p>
+
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-square-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box">
+        <h3>Other</h3>
+        <ul>
+          <li><a href="personal.html">Get Personal Recommendation</a></li>
+          <li><a href="bmi.html">BMI Calculator</a></li>
+          <li><a href="hospital.html">Hospitals</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer-box">
+        <h3>Contact Us</h3>
+        
+        <p class="contact-item">
+            <span class="icon-circle">
+                <i class="fa-solid fa-location-dot"></i>
+            </span>
+            India
+        </p>
+
+         <p class="contact-item">
+            <span class="icon-circle">
+                <i class="fa-solid fa-phone"></i>
+            </span>
+            +91 9XXXXXXXX
+        </p>
+
+         <p class="contact-item">
+            <span class="icon-circle">
+                <i class="fa-solid fa-envelope"></i>
+            </span>
+            support@nutricare.com
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 NutriCare | Health Product Recommendation System</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="js/navbar.js"></script>
+
+<script src="js/hospital.js">
+
+</script>
+
+</body>
+</html>

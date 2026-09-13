@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutricare | Personal Recommendation</title>
+
+  <link rel="stylesheet" href="css/personal.css">
+  <link rel="stylesheet" href="css/navbar.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+
+  <!-- Navbar (same shared navbar on every page) -->
+  <div id="navbar-placeholder"></div>
+
+  <section class="product-hero">
+  <h1>Personal Herbal Recommendation</h1>
+  <p>Answer a few questions and get natural health suggestions</p>
+</section>
+
+<!-- Recommendation Section -->
+    <section class="product-section">
+
+      <div class="product-search recommendation-ui">
+        <div id="formPanel">
+        <h2>Tell Us About Yourself</h2>
+
+        <form id="healthForm" class="form-grid">
+
+          <input type="number" id="age" placeholder="Age" min="1" max="120" required>
+
+          <select id="gender" required>
+            <option value="">Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <select id="disease" required>
+             <option value="">Select Health Problem</option>
+
+              <option value="cold">Cold</option>
+              <option value="cough">Cough</option>
+              <option value="cold cough">Cold & Cough</option>
+
+              <option value="diabetes">Diabetes</option>
+
+              <option value="fever">Fever</option>
+
+              <option value="digestion">Digestion Issues</option>
+
+              <option value="constipation">Constipation</option>
+
+              <option value="bp">High Blood Pressure (BP)</option>
+
+              <option value="heart">Heart Problems</option>
+
+              <option value="immunity">Low Immunity</option>
+
+              <option value="weight loss">Weight Loss</option>
+              <option value="obesity">Obesity</option>
+
+              <option value="skin">Skin Problems</option>
+          </select>
+
+          <select id="diet" required>
+            <option value="">Diet Type</option>
+            <option value="Vegetarian">Vegetarian</option>
+            <option value="Non-Vegetarian">Non-Vegetarian</option>
+            <option value="Vegan">Vegan</option>
+          </select>
+
+          <select id="allergy" required>
+            <option value="">Food Allergy / Preference</option>
+            <option value="none">No Allergy</option>
+            <option value="citrus">Citrus Allergy</option>
+            <option value="banana">Banana Allergy</option>
+            <option value="kiwi">Kiwi Allergy</option>
+            <option value="garlic">Garlic Allergy / Sensitivity</option>
+            <option value="latex-fruit">Latex-Fruit Syndrome (Banana, Kiwi, Papaya)</option>
+            <option value="high-fiber">Sensitive to High Fiber</option>
+            <option value="caffeine">Caffeine Sensitivity</option>
+          </select>
+
+          <select id="goal" required>
+            <option value="">Health Goal</option>
+            <option value="immunity">Boost Immunity</option>
+            <option value="weight">Weight Management</option>
+            <option value="digestion">Better Digestion</option>
+            <option value="heart">Heart Health</option>
+            <option value="skin">Skin Health</option>
+            <option value="energy">Energy & Stress Relief</option>
+            <option value="sugar">Blood Sugar Support</option>
+          </select>
+
+          <select id="medicine" required>
+            <option value="">Taking Medicine?</option>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+          </select>
+
+          <!-- Shown only when Medicine = Yes -->
+          <div id="medicineFields" class="medicine-fields" hidden>
+            <input type="text" id="medicineName" placeholder="Medicine Name (e.g. Metformin)">
+            <select id="medicinePurpose">
+              <option value="">Medicine Purpose / Type</option>
+              <option value="diabetes">Diabetes Medicine</option>
+              <option value="blood-pressure">Blood Pressure Medicine</option>
+              <option value="blood-thinner">Blood Thinner / Anticoagulant</option>
+              <option value="thyroid">Thyroid Medicine</option>
+              <option value="sedative">Sedative / Sleep Medicine</option>
+              <option value="immunity">Immunosuppressant / Steroid</option>
+              <option value="heart">Heart Medicine</option>
+              <option value="other">Other / Not Listed</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn full-btn">
+            Get Recommendation
+          </button>
+
+        </form>
+        </div>
+
+        <div id="resultBox"></div>
+
+        <div id="savedSection" class="saved-section">
+          <div id="savedEntry" class="saved-entry">
+            <button type="button" id="toggleSavedBtn" class="btn-secondary">View Saved Reports</button>
+          </div>
+
+          <div id="savedPanel" class="saved-panel" hidden>
+            <div class="saved-header">
+              <h3>My Saved Reports</h3>
+              <button type="button" id="backToFormBtn" class="btn-secondary">Back to Form</button>
+            </div>
+            <p class="saved-hint">Open any saved report below. Form is hidden so you can focus only on your reports.</p>
+            <div id="savedList" class="saved-list"></div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-box">
+        <h3>NutriCare</h3>
+        <p id="footer-about">
+          NutriCare is a health product recommendation system that helps users
+          improve health naturally using fruits and herbs.
+        </p>
+
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-square-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box">
+        <h3>Other</h3>
+        <ul>
+          <li><a href="personal.html">Get Personal Recommendation</a></li>
+          <li><a href="bmi.html">BMI Calculator</a></li>
+          <li><a href="hospital.html">Hospitals</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer-box">
+        <h3>Contact Us</h3>
+        
+        <p class="contact-item">
+            <span class="icon-circle">
+                <i class="fa-solid fa-location-dot"></i>
+            </span>
+            India
+        </p>
+
+         <p class="contact-item">
+            <span class="icon-circle">
+                <i class="fa-solid fa-phone"></i>
+            </span>
+            +91 9XXXXXXXX
+        </p>
+
+         <p class="contact-item">
+            <span class="icon-circle">
+                <i class="fa-solid fa-envelope"></i>
+            </span>
+            support@nutricare.com
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 NutriCare | Health Product Recommendation System</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="js/navbar.js"></script>
+  <script src="js/product-data.js"></script>
+  <script src="js/personal.js"></script>
+  
+</body>
+</html>

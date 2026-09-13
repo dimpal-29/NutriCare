@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="css/register.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+
+  <div class="box">
+    <h2 class="head1">Registration</h2>
+
+    
+      <form  method="get" id="registerForm">
+        <label>Full Name:</label>
+        <input type="text"  placeholder="Enter your full name" required   class="input-box">
+
+        <label>Phone No:</label>
+        <input type="tel" maxlength="10" placeholder="Enter your phone number" required pattern="[0-9]{10}" class="input-box">
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter your email" required class="input-box" id="email">
+
+        <label>Password:</label>
+        <input type="password" id="password" placeholder="Enter password" required  pattern="[A-Za-z0-9]{6,}" class="input-box">
+
+        <label>Re-Confirm Password:</label>
+        <input type="password"  id="confirmPassword" placeholder="Enter Re-Confirm Password:" required class="input-box">
+
+        <input type="submit" value="Register Now" class="btn">
+        <p>If you have already register <a href="login.html">Login Here </a></p>
+      </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+
+    let formTag = document.getElementById("registerForm").addEventListener("submit",function(e)
+    {
+        e.preventDefault();
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword  = document.getElementById("confirmPassword").value;
+
+         
+       if (password.length < 6) 
+        {
+            alert("Password must be at least 6 characters");
+            return;
+        }
+
+       else if(password !== confirmPassword )
+        {
+            alert("password does not match");
+            return;
+        }
+      
+        else
+        {
+
+            localStorage.setItem("userEmail", email);
+            localStorage.setItem("userPassword", password);
+
+            Swal.fire({
+              title: "Registration Successful!",
+              icon: "success"
+            }).then(() => {
+              window.location.href = 'login.html';
+            });
+        }
+
+
+    });
+    
+    
+  </script>
+</body> 
+</html>
+  
