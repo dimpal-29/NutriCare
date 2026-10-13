@@ -104,6 +104,7 @@ body {
 
 /* Button */
 .recommend-btn {
+  display: inline-block;
   background: #2e8b57;
   color: #ffffff;
   padding: 14px 32px;
@@ -115,6 +116,8 @@ body {
   cursor: pointer;
   transition: 0.3s ease;
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  max-width: 100%;
+  text-align: center;
 }
 
 .recommend-btn:hover {
@@ -485,6 +488,38 @@ footer {
 
 
 
+  /* Recommend Banner Responsive */
+  .recommend-banner {
+    padding: 40px 20px;
+    margin: 30px 0;
+  }
+
+  .recommend-content h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .recommend-content p {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+
+  .recommend-btn {
+    display: inline-block;
+    width: 100%;
+    max-width: 320px;
+    padding: 13px 20px;
+    font-size: 15px;
+    white-space: normal;
+  }
+
+  /* Product Grid Responsive */
+  .product-grid {
+    grid-template-columns: 1fr;
+    margin: 20px 0;
+    gap: 20px;
+  }
+
   /* FOOTER */
   .footer-container {
     grid-template-columns: repeat(2, 1fr);
@@ -506,4 +541,10 @@ footer {
     justify-content: center;
   }
 
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
 }

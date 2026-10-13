@@ -283,8 +283,9 @@ footer {
   }
 
   .form-box {
-    padding: 15px 15px;
-    width: 450px;
+    padding: 25px 20px;
+    width: 100%;
+    max-width: 450px;
   }
 
   .contact-info h2,

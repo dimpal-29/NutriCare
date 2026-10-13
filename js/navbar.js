@@ -38,6 +38,15 @@
       '</nav>' +
     '</header>';
 
+  // ---- hamburger mobile toggle ----
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("navMenu");
+  if (hamburger && navMenu) {
+    hamburger.onclick = function () {
+      navMenu.classList.toggle("active");
+    };
+  }
+
   // ---- show Login or Logout button based on login state ----
   const loginItem = document.getElementById("loginItem");
   const logoutItem = document.getElementById("logoutItem");
