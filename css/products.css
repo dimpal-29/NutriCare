@@ -468,6 +468,32 @@ footer {
     display: flex;
   }
 
+  .product-hero {
+    padding: 40px 15px;
+  }
+
+  .product-hero h1 {
+    font-size: 26px;
+  }
+
+  .product-hero p {
+    font-size: 15px;
+  }
+
+  .product-section {
+    padding: 30px 15px;
+  }
+
+  .product-search {
+    padding: 20px 15px;
+    margin-bottom: 30px;
+  }
+
+  .product-search h2 {
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+
   .product-search input {
     width: 100%;
     margin-bottom: 12px;

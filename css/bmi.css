@@ -86,6 +86,7 @@
 form{
 
   width: 600px;
+  max-width: 100%;
   margin: auto;
   background: #ffffff;
   padding: 45px;
@@ -454,6 +455,29 @@ footer {
     justify-content: center;
   }
 
+}
+
+@media (max-width: 480px) {
+  .bmi-info h2 {
+    font-size: 24px;
+  }
+
+  .bmi-box {
+    padding: 30px 12px;
+  }
+
+  form {
+    padding: 20px 14px;
+  }
+
+  .history-box,
+  .chart-box {
+    padding: 16px 12px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 

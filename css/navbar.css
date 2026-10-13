@@ -84,6 +84,10 @@
 
 @media (max-width: 768px) {
 
+  #navbar-placeholder .navbar {
+    padding: 14px 16px;
+  }
+
   #navbar-placeholder .hamburger {
     display: flex;
   }
@@ -92,9 +96,12 @@
     width: 100%;
     display: none;
     flex-direction: column;
-    align-items: flex-start;
-    background: #2e8b57;
-    margin-top: 10px;
+    align-items: stretch;
+    background: #246b45;
+    margin-top: 14px;
+    padding: 10px 0;
+    border-radius: 8px;
+    gap: 0;
   }
 
   #navbar-placeholder .navbar ul.active {
@@ -103,11 +110,22 @@
 
   #navbar-placeholder .navbar ul li {
     width: 100%;
-    padding: 10px 0;
+    padding: 0;
+  }
+
+  #navbar-placeholder .navbar a {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   #navbar-placeholder #loginItem,
   #navbar-placeholder #logoutItem a {
     display: inline-block;
+    width: auto;
+    margin: 10px 16px 6px;
+    text-align: center;
   }
 }

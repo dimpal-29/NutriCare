@@ -320,7 +320,9 @@ footer {
   }
 
   .about-text {
-    padding: 20px;
+    min-width: 0;
+    width: 100%;
+    padding: 20px 15px;
   }
 
   .about-image {
@@ -339,8 +341,6 @@ footer {
     width: 100%;
     max-width: 100%;
   }
-
-
 
   /* FOOTER */
   .footer-container {
@@ -363,4 +363,14 @@ footer {
     justify-content: center;
   }
 
+}
+
+@media (max-width: 480px) {
+  .about-hero h1 {
+    font-size: 22px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
 }

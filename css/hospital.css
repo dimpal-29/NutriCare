@@ -92,10 +92,20 @@ body {
 
 .hospital-search input {
   width: 550px;
+  max-width: 100%;
   padding: 15px;
   border-radius: 6px;
   border: 1px solid #cbd5e1;
   font-size: 15px;
+}
+
+.hospital-search select {
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 15px;
+  background: #ffffff;
+  outline: none;
 }
 
 .hospital-search button {
@@ -353,6 +363,10 @@ footer {
     width: 100%;
   }
 
+  .hospital-search select {
+    width: 100%;
+  }
+
   .hospital-search button {
     width: 100%;
     padding: 12px;
@@ -402,4 +416,18 @@ footer {
     justify-content: center;
   }
 
+}
+
+@media (max-width: 480px) {
+  .hospital-hero h2 {
+    font-size: 26px;
+  }
+
+  .hospital-section {
+    padding: 30px 15px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
 }
